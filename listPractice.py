@@ -77,40 +77,40 @@
 
 
 # 6.Write a Python program to remove duplicate elements from a list
-# ls = [1,2,3,4,5,5,3,2,4,9]
-# ans = []
+ls = [1,2,3,4,5,5,3,2,4,9]
+ans = []
 
-# for i in ls:
-#     if i not in ans:
-#        ans.append(i)
+for i in ls:
+    if i not in ans:
+       ans.append(i)
 
-# print(ans)
+print(ans)
 
 
 # 7.Write a Python program to count the frequency of each element in a list. 
-# ls = [1,2,3,4,4,2,3,6,7,6,5,2]
-# for i in range(len(ls)):
-#     count = 0
-#     for j in range(i+1):
-#         if ls[i] == ls[j]:
-#             count+=1
-#             print(f"element:{ls[j]} frequency:{count}")
+ls = [1,2,3,4,4,2,3,6,7,6,5,2]
+for i in range(len(ls)):
+    count = 0
+    for j in range(i+1):
+        if ls[i] == ls[j]:
+            count+=1
+            print(f"element:{ls[j]} frequency:{count}")
             
 
 
-# ls = [1, 2, 3, 4, 4, 2, 3, 6, 7, 6, 5, 2]
+ls = [1, 2, 3, 4, 4, 2, 3, 6, 7, 6, 5, 2]
 
-# for i in range(len(ls)):
-#     if ls[i] in ls[:i]:
-#         continue
+for i in range(len(ls)):
+    if ls[i] in ls[:i]:
+        continue
 
-#     count = 0
+    count = 0
 
-#     for j in range(len(ls)):
-#         if ls[i] == ls[j]:
-#             count += 1
+    for j in range(len(ls)):
+        if ls[i] == ls[j]:
+            count += 1
 
-#     print(ls[i], ":", count)
+    print(ls[i], ":", count)
 
 
 
@@ -128,28 +128,28 @@ print(dup)
 
 
 # 9.Write a Python program to check whether a list is a palindrome. 
-# ls = [1,2,1,3]
-# rev = []
-# tem = ls
+ls = [1,2,1,3]
+rev = []
+tem = ls
 
-# for i in range(len(ls)-1,-1,-1):
-#     rev.append(ls[i])
+for i in range(len(ls)-1,-1,-1):
+    rev.append(ls[i])
 
-# if rev == tem:
-#     print("list is palindrome")
-# else:
-#     print("list is not palindrome")
+if rev == tem:
+    print("list is palindrome")
+else:
+    print("list is not palindrome")
 
 
 
 # 10.Write a Python program to find the sum of all elements in a list. 
-# ls = [1, 2, 3, 4, 5, 6, 6, 7]
-# sum = 0
+ls = [1, 2, 3, 4, 5, 6, 6, 7]
+sum = 0
 
-# for i in range(len(ls)):
-#     sum = sum + ls[i]
+for i in range(len(ls)):
+    sum = sum + ls[i]
 
-# print(sum)
+print(sum)
 
 
 # 11.Write a Python program to find the product of all elements in a list.
