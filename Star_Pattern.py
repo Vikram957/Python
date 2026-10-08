@@ -1,14 +1,14 @@
 # E PATTERN
-n = 7
-for i in range(n):
-    for j in range(n):
-        if i == 0 or i == n//2 or i == n-1 or j == 0:
-            print("*",end="")
-        # elif j == 0:
-        #     print("*",end ="")
-        else:
-            print(" ",end = "")
-    print()
+# n = 7
+# for i in range(n):
+#     for j in range(n):
+#         if i == 0 or i == n//2 or i == n-1 or j == 0:
+#             print("*",end="")
+#         # elif j == 0:
+#         #     print("*",end ="")
+#         else:
+#             print(" ",end = "")
+#     print()
 
 
 # PATTERN F
@@ -146,5 +146,23 @@ for i in range(n):
 #         else:
 #             print(" ", end=" ")
 #     print()
+
+
+# DIAMOND PATTERN 
+n = 6
+for i in range(1, n + 1):
+    print(" " * (n - i) + "* " * i)    #(2*i-1) for odd_Stars like 1-3-5-7
+
+for i in range(n - 1, 0, -1):
+    print(" " * (n - i) + "* " * i)
+
+
+# BUTTERFLY PATTERN
+n = 5
+for i in range(1,n+1):
+    print("*" * i + " " * (2 * (n - i)) + "*" * i)
+
+for i in range(n - 1, 0, -1):
+    print("*" * i + " " * (2 * (n - i)) + "*" * i)
 
 
