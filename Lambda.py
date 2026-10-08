@@ -143,3 +143,121 @@ data = {
 }
 ans = max(data.items(), key = lambda x:x[1])
 print("maximum value in dictionary is:",ans)
+
+
+
+
+
+
+
+
+# PRACTICE FROM PRACTICE SHEET*********************************************
+
+# Basic Lambda Practice
+# 1.Create a lambda function that takes one number and returns its square.
+square = lambda x : x**2, print(square(3))
+
+# 2.Create a lambda function that takes one number and returns its cube.
+cube = lambda x : x **3, print(cube(4))
+
+# 3. Create a lambda function that takes two numbers and returns their sum.
+sum = lambda x,y : x+y 
+print(sum(3,6))
+
+# 4. Create a lambda function that takes two numbers and returns their larger value.
+lar = lambda x,y : x if x > y else y
+print(lar(3,6))
+
+# 5. Create a lambda function that checks whether a number is even.
+even = lambda x : True if x % 2 == 0 else False
+print(even(66))
+
+
+
+# Lambda with sorted()
+
+# 6. Sort this list in ascending order using lambda
+students = [("Vman", 80), ("Riya", 95), ("Rohan", 70)]
+result = sorted(students , key = lambda x : x[0])
+print(result)
+
+
+# 7. Sort the same student list by marks in descending order.
+students = [("Vman", 80), ("Riya", 95), ("Rohan", 70)]
+result = sorted(students , key = lambda x : x[1])
+print(result)
+
+
+# 8. Sort the student list alphabetically by student name.
+students = [("Vman", 80), ("Riya", 95), ("Rohan", 70)]
+students.sort(key = lambda x : x[0])
+print(students)
+
+
+# 7. Sort the same student list by marks in descending order.
+students = [("Vman", 80), ("Riya", 95), ("Rohan", 70)]
+result = sorted(students , key = lambda x : x[1], reverse=True)
+print(result)
+
+
+# 8. Sort the student list alphabetically by student name.
+students = [("Vman", 80), ("Riya", 95), ("Rohan", 70)]
+students.sort(key = lambda x : x[0])
+print(students)
+
+
+# 9. Sort this list of tuples by the second value in descending order
+data = [("A", 180), ("B", 95), ("C", 100)]
+ans = sorted(data , key = lambda x : x[1] , reverse=True)
+print(ans)
+
+
+# 10. Sort a list of words according to their length using lambda
+words = ["Python", "AI", "Machine", "Data", "Programming"]
+ans = sorted(words , key = lambda x : len(x))
+print(ans)
+
+
+
+# Interview / Logic Practice
+
+# 22. Write a lambda function to check whether a string starts with the letter 'A'.
+ans = lambda x : True if x[0].upper()=="A" else "False"    #if you dont want small "a" then just remove .upper() function
+print(ans("Vikram"))
+print(ans("Akash"))
+print(ans("akash"))
+
+
+#23 Write a lambda function that returns 'Pass' if marks are 40 or more, otherwise 'Fail'.
+marks = lambda x : "Pass" if x >= 40 else "Fail"
+print(marks(33))
+print(marks(43))
+
+
+# Given employees = [("Aman", 25000), ("Riya", 35000), ("Rohan", 30000)], sort employees by salary from highest to lowest.
+
+employees = [("Aman", 25000), ("Riya", 35000), ("Rohan", 30000)]
+result = sorted(employees , key = lambda x : x[1], reverse = True)
+print(result)
+
+
+# 25.Explain the difference between a normal def function and a lambda function with one example of each.
+# In Python, both def and lambda are used to create functions. 
+# The main difference is that def is used to create regular functions, while lambda is used to create small, anonymous functions with a single expression.
+
+# Normal function using def
+def sum(a,b):
+    return a+b
+print(sum(3,5))
+
+# lambda function
+sum = lambda x,y : x+y
+print(sum(3,5))
+
+
+# Challenge
+# 26. Given products = [("Laptop", 55000), ("Mouse", 800), ("Keyboard", 1500), ("Monitor", 12000)], sort the products by price from highest to lowest using sorted() and lambda.
+
+products = [("Laptop", 55000), ("Mouse", 800), ("Keyboard", 1500), ("Monitor", 12000)]
+ans = sorted(products,key = lambda x : x[1],reverse=True)
+print(ans)
