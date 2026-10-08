@@ -114,3 +114,6 @@ colors = ['red','blue','green']
 size = ['S','M','L','XL']
 ans = [(i,j)for i in colors for j in size]
 print(ans)
+
+
+
