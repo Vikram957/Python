@@ -128,3 +128,121 @@ perfect_square = [i for i in range(1,101) if math.isqrt(i)**2 == i]
 print(perfect_square)
 
 
+# 22.	Given numbers = [1, 2, 2, 3, 4, 4, 5, 6, 6], create a list containing only unique values using list comprehension.
+numbers = [1, 2, 2, 3, 4, 4, 5, 6, 6]
+result = [i for i in numbers if numbers.count(i) <=1]
+print(result)
+
+
+# 23.	Given numbers = [1, 2, 3, 4, 5], create [1, 4, 9, 16, 25] without using a normal for loop.
+numbers = [1,2,3,4,5]
+square = [i**2 for i in numbers]
+print(square)
+
+
+# 24.	Given words = ['python', 'java', 'cpp', 'javascript'], create a list containing the first character of every word.
+words = ['python', 'java', 'cpp', 'javascript']
+ans = [i[0] for i in words]
+print(ans)
+
+
+# 25.	Given numbers = [10, 15, 20, 25, 30], create ['Even', 'Odd', 'Even', 'Odd', 'Even'].
+numbers = [10, 15, 20, 25, 30]
+check = ["EVEN" if i % 2 == 0 else "ODD"for i in numbers]
+print(check)
+
+
+# 26.Given numbers = [1, 2, 3, 4, 5, 6], create a list where even numbers are multiplied by 2 and odd numbers are multiplied by 3. Expected: [3, 4, 9, 8, 15, 12].
+numbers = [1, 2, 3, 4, 5, 6]
+result = [i*2 if i % 2 == 0 else i*3 for i in numbers]
+print(result)
+
+
+# 27.Given words = ['apple', 'banana', 'cat', 'dog', 'elephant'], create a list containing the lengths of only those words whose length is greater than 3.
+words = ['apple', 'banana', 'cat', 'dog', 'elephant']
+result = [i for i in words if len(i) > 3]
+print(result)
+
+
+
+# 28.Find all numbers from 1 to 50 whose square is greater than 500.
+result = [i for i in range(1,51) if i**2 > 500]
+print(result)
+
+
+
+# 29.Given numbers = [2, 5, 8, 11, 14, 17], create a list containing 'Even' or 'Odd' based on each number.
+numbers = [2, 5, 8, 11, 14, 17]
+result = ["EVEN" if i % 2 == 0 else "ODD" for i in numbers]
+print(result)
+
+
+
+# 30.Challenge: Given sentence = 'Python is easy to learn', create a list containing the length of each word. Expected: [6, 2, 4, 2, 5].
+sentence = 'Python is easy to learn'
+result = [len(i) for i in sentence.split()]
+print(result)
+
+
+
+
+
+
+# Interview Challenge – No Normal for Loop
+
+# 31.Create a list of squares of even numbers from 1 to 20.
+even_square = [i**2 for i in range(1,21) if i % 2 == 0]
+print(even_square)
+
+
+# 32.Create a list of words having more than 5 characters.
+words = ['python', 'cat', 'science', 'AI', 'machine', 'data']
+result = [i for i in words if len(i) > 5]
+print(result)
+
+
+# 33.Create a list of numbers divisible by 3 or 5 from 1 to 100.
+ans = [i for i in range(1,101) if i % 3 == 0 or i % 5 == 0]
+print(ans)
+
+
+# 34.Replace negative numbers with their absolute values.
+numbers = [1,2,-3,-5,6,-7,8]
+ans = [abs(i) for i in numbers]
+print(ans)
+
+
+# 35.Find all vowels from a string using list comprehension.
+text = "Hello Python Programming"
+result = [i for i in text if i.lower() in "aeiou"]
+print(result)
+
+
+# 37.Extract numbers greater than 50 from a list.
+numbers = [20,30,50,60,70,80]
+result = [i for i in numbers if i > 50]
+print(result)
+
+
+
+# 38.	Convert a list of Celsius temperatures to Fahrenheit.
+celcius = [20,30,40,50,60]
+fah = [(i*9/5)+32 for i in celcius]
+print(fah)
+
+
+
+# 39.	Create a list of (number, square) tuples.
+numbers = [1,2,3,4,5,6,7]
+square = [(i,i**2)for i in numbers]
+print(square)
+
+
+
+# 40.	Find common elements between two lists.
+l1 = [1,2,3,4,5,6]
+l2 = [1,2,3,7,8,9]
+common = [i for i in l1 if i in l2]
+print(common)
+
+
