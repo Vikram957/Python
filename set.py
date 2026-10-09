@@ -254,3 +254,5 @@
 #     print("s2 is not a proper superset of s1")
 
 
+# # frozen set***********
+# it is a final set we cant change values in it

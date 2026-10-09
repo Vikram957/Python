@@ -56,3 +56,8 @@ passed_Students = filter(lambda x :x >= 40,marks)
 print(list(passed_Students))
 
 
+
+# from functools import reduce
+from functools import reduce
+even = lambda x,y : max(x,y)
+print(reduce(even,[3,5,4,23,34,45]))
