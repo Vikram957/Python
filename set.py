@@ -240,18 +240,18 @@
 
 
 # 27.	Write a Python program to verify proper subset and proper superset relationships. 
-# s1 = {1, 2, 3}
-# s2 = {1, 2, 3, 4, 5}
+s1 = {1, 2, 3}
+s2 = {1, 2, 3, 4, 5}
 
-# if s1 < s2:
-#     print("s1 is a proper subset of s2")
-# else:
-#     print("s1 is not a proper subset of s2")
+if s1 < s2:
+    print("s1 is a proper subset of s2")
+else:
+    print("s1 is not a proper subset of s2")
 
-# if s2 > s1:
-#     print("s2 is a proper superset of s1")
-# else:
-#     print("s2 is not a proper superset of s1")
+if s2 > s1:
+    print("s2 is a proper superset of s1")
+else:
+    print("s2 is not a proper superset of s1")
 
 
 # # frozen set***********
