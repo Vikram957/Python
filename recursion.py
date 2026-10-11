@@ -25,9 +25,18 @@
 #     return n*factorial(n-1)
 # print(factorial(5))
 
-
+# sum of n numbers
 def sum_numbers(n):
     if n ==0:
         return 0
     return n%10 + sum_numbers(n//10)
 print(sum_numbers(1521))
+
+
+# fibonacci series
+def fibonacci(n):
+    if n<=1:
+        return 1
+    return fibonacci(n-1)+fibonacci(n-2)
+print(fibonacci(7))
+
