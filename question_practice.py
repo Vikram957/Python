@@ -87,7 +87,7 @@ def frequency_count(list1):
         for j in range(i+1):
             if list1[i] == list1[j]:
                 count+=1
-            print(list1[i],count)
+        print(list1[i],count)
                 
 frequency_count([1,2,1,3,4,3,5,4,6,7,8,9,9])
 
@@ -301,6 +301,469 @@ def k_rotates(ls):
     rot = ls[k:] + ls[:k]
     return rot
 print(k_rotates([1,2,3,4,5,6,7]))
+
+
+
+
+# 22.	Write a Python program to find all pairs in a list whose sum is equal to a given target value. 
+def pairs(ls,tar):
+    for i in range(len(ls)):
+        for j in range(len(ls)):
+            if ls[i] + ls[j] == tar:
+                print(ls[i],ls[j])
+
+pairs([1,2,3,4,5,6,7,8,9],8)
+
+
+
+# 23.	Write a Python program to find the first non-repeating element in a list. 
+def first_non_repeating(ls):
+    for i in range(len(ls)):
+        if ls.count(ls[i]) == 1:
+            return ls[i]
+
+print(first_non_repeating([1,2,3,4,5,1,2,5,6,7,8]))
+
+
+
+# 24.	Write a Python program to find the missing number in a list containing consecutive integers. 
+def consecutive_int(ls):
+    for i in range(min(ls),max(ls)+1):
+        if i not in ls:
+            return i
+
+print(consecutive_int([1,2,4,5]))
+
+
+
+
+# 25.	Write a Python program to swap the first and last elements of a list. 
+def swap(ls):
+    ls[0],ls[-1] = ls[-1],ls[0]
+    return ls
+print(swap([1,2,3,4,5]))
+
+
+
+# 26.Write a Python program to check if all elements in a list are unique. 
+def check(ls):
+    un = []
+    ans = []
+    for i in ls:
+        if i not in un:
+            un.append(i)
+        else:
+            return False
+    return True
+
+print(check([1,2,3,4,5,2]))
+
+
+
+# 27.	Write a Python program to split a list into two equal halves. 
+def split(ls):
+    one = []
+    two = []
+    r = len(ls)//2
+    for i in range(len(ls)):
+        if i < r:
+            one.append(ls[i])
+        else:
+            two.append(ls[i])
+    return one,two
+print(split([1,2,55,66,22,77,88]))
+
+
+
+    # 29.	Write a Python program to sort a list without using built-in sorting methods. 
+def sort_list(ls):
+    for i in range(len(ls)):
+        for j in range(len(ls) - i - 1):
+         if ls[j] > ls[j + 1]:
+                ls[j], ls[j + 1] = ls[j + 1], ls[j]
+    return ls
+
+print(sort_list([1,2,5,4,99,5,6]))
+
+
+
+# 30.	Write a Python program to find the maximum difference between any two elements in a list.
+def maximum_diff(ls):
+    minimum = float("+inf")
+    maximum = float("-inf")
+    for i in ls:
+        if i > maximum:
+            maximum = i
+
+        if i < minimum:
+            minimum = i
+    diff = maximum - minimum
+
+    return diff
+print("maximum difference:",maximum_diff([1,2,3,4,5,6,7]))
+
+
+
+
+
+# STRINGS
+# Write a Python program to find the number of characters in a string 
+def length_string(s):
+    count = 0
+    for i in s:
+        count+=1
+    return count
+print("length of str is:",length_string("vikram"))
+
+
+
+# Write a Python program to count the number of occurrences of all vowels in a string.
+def vowel_count(s):
+    count = 0
+    for i in s:
+        if i.lower() in "aeiou":
+            count +=1
+    return count
+print("vowel count is:",vowel_count("VIkramao"))
+
+
+
+# Write a Python program to find common characters present in two words.
+def common_char(s,s1):
+    common = ""
+    for i in s:
+        if i in s1 and i not in common:
+            common += i
+    return common
+print(common_char("vikram","singh"))
+
+
+
+
+# Write a Python program to check whether a given string is a palindrome.
+def palindrome(s):
+    if s == s[::-1]:
+            print("palindrome")
+    else:
+        print("not palindrome")
+
+palindrome("viv")
+
+
+# Write a Python program to convert alternate characters in a string to capital letters.
+def convert_char(s):
+    result = ""
+    for i in range(len(s)):
+        if i % 2 == 0:
+            result +=s[i].upper()
+        else:
+            result += s[i]
+    return result
+print(convert_char("vikram singh"))
+
+
+
+# Write a Python program to reverse a string without using built-in methods
+def reverse_str(s):
+    rev = s[::-1]
+    return rev
+print(reverse_str("vikram singh"))
+
+
+# Write a Python program to count the number of words in a sentence (without using the split() function).
+def count_words(s):
+    count = 1
+    for i in s:
+        if i == " ":
+            count+=1
+    return count
+print("total words in the str:",count_words("python is easy language"))
+
+
+
+# Write a Python program to remove all spaces from a string.
+def remove_space(s):
+    ans = ""
+    for i in s:
+        if i != " ":
+            ans += i
+    return ans
+print(remove_space("python is easy language"))
+
+
+
+# Write a Python program to replace all occurrences of a given character in a string with another character.
+def replace(s,old,new):
+    ans = ""
+    for i in s:
+        if i == old:
+            ans += new
+        else:
+            ans += i
+    return ans
+print(replace("banana","a","o"))
+
+
+# Write a Python program to read a sentence and print the longest word in that sentence.
+def longest_word(s):
+    long = ""
+    for i in s.split():
+        if len(i) > len(long):
+            long = i
+    return long
+print(longest_word("python is a programming language"))
+
+
+
+# Write a Python program to check if two strings are anagrams (words formed by rearranging the letters of another, like “listen” and “silent”).
+def anagram(s1,s2):
+    if sorted(s1) == sorted(s2):
+        print("anagram")
+    else:
+        print("not anagram")
+anagram("silent","listen")
+
+
+# second way
+def anagram(s1, s2):
+    if len(s1) != len(s2):
+        return False
+
+    for i in s1:
+        if s1.count(i) != s2.count(i):
+            return False
+
+    return True
+
+print(anagram("listen", "silent"))
+
+
+
+# Write a Python program to find all the words in a string that start with a vowel.
+def vowel_check(s):
+    for i in s.split():
+        if i[0].lower() in "aeiou":
+            print(i,end = " ")
+            
+vowel_check("python is a language of cofing")
+
+
+print()
+# Write a Python program to remove all digits from a given string.
+def remove_digit(s):
+    ans = ""
+    for i in s:
+        if i.isalpha():
+            ans +=i
+    return ans
+print("removed digits from str:",remove_digit("vi23k3ram422"))
+
+
+
+# 1.	Create a dictionary of student details and print all keys and values. 
+d = {1:"vikram",2:"aman",3 : "pulkit"}
+for i in d.items():
+    print(i)
+
+
+# 2.	Check whether a given key exists in a dictionary. 
+
+d = {1:"vikram",2:"aman",3 : "pulkit"}
+key = 5
+for i in d.items():
+    if i[0] == key:
+        print("key exists")
+        break
+else:
+    print("not exists")
+
+
+
+# 3.Count the number of key-value pairs in a dictionary. 
+d = {1: "vikram", 2: "aman", 3: "pulkit"}
+
+count = 0
+for i in d.items():
+    count += 1
+
+print("count of key-value pairs are:",count)
+
+
+
+# 4.	Add a new key-value pair to a dictionary. 
+d = {1: "vikram", 2: "aman", 3: "pulkit"}
+d[4] = "sawan"
+print(d)
+
+
+# 5.	Update the value of an existing key. 
+d = {1: "vikram", 2: "aman", 3: "pulkit"}
+d[3] = "singh"
+print(d)
+
+
+# 6.	Delete a specific key from a dictionary. 
+d = {1: "vikram", 2: "aman", 3: "pulkit"}
+del d[1]
+print(d)
+
+
+# 7.	Find the sum of all values in a dictionary. 
+d = {"vikram": 33, "pulkit": 22, "sawan": 44}
+sum = 0
+for i in d.values():
+    sum += i
+print(sum)
+
+
+# 8.	Merge two dictionaries into one.
+d1 = {1: "vikram", 2: "aman"}
+d2 = {3: "pulkit", 4: "sawan"}
+
+d = {}
+
+for i in d1:
+    d[i] = d1[i]
+
+for i in d2:
+    d[i] = d2[i]
+
+print(d)
+
+
+
+# 9.Count the frequency of each character in a string
+s = "hello"
+d = {}
+
+for i in s:
+    if i in d:
+        d[i] += 1
+    else:
+        d[i] = 1
+
+print(d)
+
+
+# Count the frequency of each word in a sentence
+s = "python is a language"
+d = {}
+for i in s.split():
+    if i in d:
+        d[i] +=1
+    else:
+        d[i] = 1
+print(d)
+
+
+
+# 11.	Find the first non-repeating character in a string.
+s = "aabbcde"
+d = {}
+
+for i in s:
+    if i in d:
+        d[i] += 1
+    else:
+        d[i] = 1
+
+for i in s:
+    if d[i] == 1:
+        print(i)
+        break
+
+# 12.	Find the first repeating character in a string.
+s = "abbccd"
+d = {}
+for i in s:
+    if i in d:
+        d[i] +=1
+    else:
+        d[i] = 1
+for i in s:
+    if d[i]> 1:
+        print(i)
+        break
+
+
+
+
+
+# 13.	Find the most frequent character in a string. 
+s = "banana"
+d = {}
+
+for i in s:
+    if i in d:
+        d[i] += 1
+    else:
+        d[i] = 1
+
+max_char = ""
+max_count = 0
+
+for i in d:
+    if d[i] > max_count:
+        max_count = d[i]
+        max_char = i
+
+print(max_char)
+
+
+# 13.	Find the most frequent character in a string. 
+
+s = "banana"
+d = {}
+
+for i in s:
+    if i in d:
+        d[i] += 1
+    else:
+        d[i] = 1
+
+min_char = ""
+min_count = float("+inf")
+
+for i in d:
+    if d[i] < min_count:
+        min_count = d[i]
+        min_char = i
+
+print(min_char)
+
+# 15.	Find duplicate characters in a string.
+s = "banana"
+ans = ""
+
+for i in s:
+    if s.count(i) > 1 and i not in ans:
+        ans += i
+
+print(ans)
+
+
+
+# Find duplicate words in a sentence.
+s = "banana is a fruit is tree nest"
+ans = ""
+for i in s.split():
+    if s.split().count(i) > 1 and i not in ans.split():
+        ans += i + " "
+print(ans)
+
+
+# 17.Find the key having the maximum value. 
+d = {1: 20, 2: 30, 3: 40, 4: 50}
+
+max_value = 0
+ans = 0
+
+for i in d:
+    if d[i] > max_value:
+        max_value = d[i]
+        ans = i
+
+print(ans)
 
 
 

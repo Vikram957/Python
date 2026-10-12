@@ -303,12 +303,13 @@ else:
 
 
 # 24.Write a Python program to find the missing number in a list containing consecutive integers. 
-ls = [1, 2, 3, 5, 6,8]
 
-for i in range(1, len(ls) + 2):
+ls = [1, 2, 3, 5, 6, 8]
+
+for i in range(min(ls), max(ls) + 1):
     if i not in ls:
         print("Missing number:", i)
-        
+
 
 
 # 25.	Write a Python program to swap the first and last elements of a list. 

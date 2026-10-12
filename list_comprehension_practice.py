@@ -208,7 +208,7 @@ print(ans)
 
 # 34.Replace negative numbers with their absolute values.
 numbers = [1,2,-3,-5,6,-7,8]
-ans = [abs(i) for i in numbers]
+ans = [abs(i) for i in numbers if i < 0]
 print(ans)
 
 
