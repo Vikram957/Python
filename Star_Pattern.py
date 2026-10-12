@@ -151,10 +151,12 @@
 # DIAMOND PATTERN 
 n = 6
 for i in range(1, n + 1):
-    print(" " * (n - i) + "* " * i)    #(2*i-1) for odd_Stars like 1-3-5-7
+    print(" " * (n - i) + "*" *(2*i-1))    #(2*i-1) for odd_Stars like 1-3-5-7
 
 for i in range(n - 1, 0, -1):
-    print(" " * (n - i) + "* " * i)
+    print(" " * (n - i) + "*" * (2*i-1))
+
+
 
 
 # BUTTERFLY PATTERN

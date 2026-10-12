@@ -766,5 +766,118 @@ for i in d:
 print(ans)
 
 
+# 18.	Find the key having the minimum value. 
+d = {1: 20, 2: 30, 3: 40, 4: 50}
+
+min_value = float("+inf")
+ans = 0
+
+for i in d:
+    if d[i] < min_value:
+        min_value = d[i]
+        ans = i
+
+print(ans)
+
+
+
+# 19.	Sort a dictionary by keys.
+d = {3: "pulkit", 1: "vikram", 2: "aman"}
+
+ans = {}
+
+for i in sorted(d):
+    ans[i] = d[i]
+
+print(ans)
+
+
+# 20.	Sort a dictionary by values.
+d = {1: 40, 2: 10, 3: 30, 4: 20}
+ans = {}
+
+items = list(d.items())
+
+for i in range(len(items)):
+    for j in range(i + 1, len(items)):
+        if items[i][1] > items[j][1]:
+            items[i], items[j] = items[j], items[i]
+
+for i in items:
+    ans[i[0]] = i[1]
+
+print(ans)
+
+
+# 21.	Reverse a dictionary (swap keys and values). 
+d = {1: "vikram", 2: "aman", 3: "pulkit"}
+ans = {}
+
+for i in d:
+    ans[d[i]] = i
+
+print(ans)
+
+# 22.Create a dictionary from two lists. 
+keys = [1, 2, 3]
+values = ["vikram", "aman", "pulkit"]
+d = {}
+
+for i in range(len(keys)):
+    d[keys[i]] = values[i]
+
+print(d)
+
+
+# 23.Convert a list into a dictionary where elements are keys and their squares are values
+ls = [1, 2, 3, 4, 5]
+d = {}
+
+for i in ls:
+    d[i] = i ** 2
+
+print(d)
+
+
+
+# 24.	Find all keys associated with a particular value. 
+d = {1: "aman", 2: "vikram", 3: "aman", 4: "pulkit"}
+value = "aman"
+ans = []
+
+for i in d:
+    if d[i] == value:
+        ans.append(i)
+
+print(ans)
+
+
+
+
+
+# 25.	Remove all duplicate values from a dictionary. 
+d = {1: "aman", 2: "vikram", 3: "aman", 4: "pulkit"}
+ans = {}
+
+for i in d:
+    if d[i] not in ans.values():
+        ans[i] = d[i]
+
+print(ans)
+
+
+
+
+# 26.	Count how many times each element appears in a list using a dictionary.
+ls = [1, 2, 3, 2, 1, 4, 2]
+d = {}
+
+for i in ls:
+    if i in d:
+        d[i] += 1
+    else:
+        d[i] = 1
+
+print(d)
 
 
