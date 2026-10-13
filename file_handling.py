@@ -93,3 +93,6 @@ with open("data.txt","x") as file:
     file.write("hello world")    #it creates new file because file is not exists
 
 
+
+# with open("data.txt","x") as file:
+#     file.write("hello world")     #this time it throws error bcoz file already exists
