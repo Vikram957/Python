@@ -5,3 +5,4 @@ print("1st way ",add(2,5))
 from my_package import math_utils
 ans = math_utils.add(2,4)
 print("2nd way ",ans)
+
