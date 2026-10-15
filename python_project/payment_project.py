@@ -1,8 +1,8 @@
 import qrcode
 import PIL
-# Taking UPI ID as a input
 
 while True:
+    # Taking UPI ID as a input
     upi_id = input("Enter your upi id = ")
 
 # Basic UPI ID FORMAT VALIDATION
