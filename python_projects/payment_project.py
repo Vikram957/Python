@@ -44,3 +44,5 @@ paytm_qr = qrcode.make(paytm_url)
 phone_pe_qr.show()
 google_pay_qr.show()
 paytm_qr.show()
+
+
