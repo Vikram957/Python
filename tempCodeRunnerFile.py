@@ -1,4 +1,6 @@
-def factorial(n):
-    if n==0:
-        return 1
-    return n*factorial(n-1)
+ndar
+# year = int(input("enter year:"))
+# month = int(input("enter month:"))
+
+# cal = calendar.month(year,month)
+# print(cal)
