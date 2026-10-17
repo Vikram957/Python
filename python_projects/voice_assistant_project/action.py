@@ -4,9 +4,13 @@ import datetime
 import webbrowser
 
 def Action(data):
-    user_data = data.lower()
+    if data is None or not str(data).strip():
+        return "Please enter a message."
 
-    if "what is your name" in user_data or "who are you" in user_data or "hu r u" in user_data:
+    user_data = str(data).strip().lower()
+    # user_data = data.lower()
+
+    if "what is your name" in user_data or "who are you" in user_data or "hu r u" in user_data or "what's your name" in user_data:
         text_to_speech.text_to_speech("My name is virtual Assistant")
         return "My name is virtual Assistant"
 
@@ -45,12 +49,20 @@ def Action(data):
         return "opening youtube for you"
 
 
-    elif "Google" in user_data or "open Google" in user_data:
+    elif "google" in user_data or "open google" in user_data:
         webbrowser.open("https://www.google.com/")
         text_to_speech.text_to_speech("opening google for you")
         return "opening Google for you"
+
+    elif "who is the current prime minister of india" in user_data or "prime minister name" in user_data or "who is the prime minister of india" in user_data:
+        text_to_speech.text_to_speech("Current prime Minister of India is Narendra Modi")
+        return "Current prime Minister of India is Narendra Modi"
 
 
     else:
         text_to_speech.text_to_speech("I'm not able to understand")
         return "I'm not able to understand"
+
+
+
+    speech_to_text()

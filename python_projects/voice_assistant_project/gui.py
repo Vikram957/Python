@@ -6,7 +6,7 @@ root = Tk()
 root.title("Voice Assistant")
 root.geometry("575x675")   #width
 root.resizable(False,False)   #it restrict resizable window
-root.config(bg = "#6F8FAF")
+root.config(bg = "#171923")
 
 # ask function
 def ask():
@@ -35,7 +35,7 @@ def del_txt():
 # FRAME
 
 frame = LabelFrame(root , padx = 12, pady = 7,borderwidth=3,relief="raised")
-frame.config(bg = "#6F8FAF")
+frame.config(bg = "#292D3E")
 frame.grid(row = 0,column=1,padx = 122,pady=7)
 
 
@@ -66,16 +66,16 @@ entry.place(x=130,y=520,width=299,height=36)
 
 
 # Butoon 1
-button1 = Button(root,text = "ASK",bg = "#356696",pady=14,padx=30,borderwidth=3,relief="solid",command=ask)
+button1 = Button(root,text = "ASK",bg = "#A78BFA",pady=14,padx=30,borderwidth=3,relief="solid",command=ask)
 button1.place(x = 90, y = 580)
 
 # Butoon 2
-button2 = Button(root,text = "Send",bg = "#356696",pady=14,padx=30,borderwidth=3,relief="solid",command=send)
+button2 = Button(root,text = "Send",bg = "#A78BFA",pady=14,padx=30,borderwidth=3,relief="solid",command=send)
 button2.place(x = 390, y = 580)
 
 
 # Butoon 3
-button3 = Button(root,text = "Delete",bg = "#356696",pady=14,padx=30,borderwidth=3,relief="solid",command=del_txt)
+button3 = Button(root,text = "Delete",bg = "#A78BFA",pady=14,padx=30,borderwidth=3,relief="solid",command=del_txt)
 button3.place(x = 232, y = 580)
 
 
