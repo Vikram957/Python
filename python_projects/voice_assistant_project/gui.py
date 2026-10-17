@@ -1,5 +1,7 @@
 from tkinter import*
 from PIL import Image , ImageTk
+import speech_to_text
+import action
 root = Tk()
 root.title("Voice Assistant")
 root.geometry("575x675")   #width
@@ -8,14 +10,28 @@ root.config(bg = "#6F8FAF")
 
 # ask function
 def ask():
-    print("ask")
+    user_val = speech_to_text.speech_to_text()
+    bot_val = action.Action(user_val)
+    text.insert(END , "User--->"+user_val+"\n")
+    if bot_val != None:
+        text.insert(END, "Bot<---"+str(bot_val)+"\n")
+    if bot_val == "Ok Sir":
+        root.destroy()
+
 
 
 def send():
-    print("send")
+    send = entry.get()
+    bot = action.Action(send)
+    text.insert(END, "User--->"+send+"\n")
+    if bot != None:
+        text.insert(END, "Bot<---"+str(bot)+"\n")
+    if bot == "Ok Sir":
+        root.destroy()
+
 
 def del_txt():
-    print("Text Delete")
+    text.delete("1.0" , "end")
 # FRAME
 
 frame = LabelFrame(root , padx = 12, pady = 7,borderwidth=3,relief="raised")
@@ -41,7 +57,7 @@ image_label.grid(row=1,column=0,pady=20)
 
 text = Text(root , font= ("courier 10 bold"),bg = "#356696")
 text.grid(row = 2,column = 0)
-text.place(x = 130, y = 410,width=300,height=100)
+text.place(x = 100, y = 410,width=360,height=100)
 
 
 # ENTRY WIDGET
