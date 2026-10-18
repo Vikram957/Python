@@ -23,6 +23,7 @@ Some small projects I've built while learning Python:
 - 🧠 **Quiz Game (Terminal-Based)** – A command-line quiz game that tests users' knowledge through questions and tracks their answers.
 - 📱 **UPI Payment QR Code Generator** – A Python project that generates QR codes from UPI payment URLs using the `qrcode` and `Pillow` libraries. It includes basic UPI ID format validation before generating QR codes.
 - 🤖 Python Voice Assistant – A desktop voice assistant built with Python and Tkinter that recognizes voice commands and responds using text-to-speech. It can perform various tasks through voice commands and is designed to support additional features in the future.
+- 📄 PDF Merger – A Python utility built using the pikepdf library that combines multiple PDF files into a single document.
 
 More projects and practice programs will be added as I continue learning.
 
