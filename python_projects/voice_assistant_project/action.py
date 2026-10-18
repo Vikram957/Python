@@ -38,7 +38,7 @@ def Action(data):
         text_to_speech.text_to_speech("Ok Sir")
         return "Ok Sir"
 
-    elif "play music" in user_data or "open spotify" in user_data:
+    elif "play music" in user_data or "open spotify" in user_data or "song" in user_data or "music" in user_data:
         webbrowser.open("https://open.spotify.com/")
         text_to_speech.text_to_speech("opening spotify for you")
         return "opening spotify for you"
