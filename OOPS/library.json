@@ -1,0 +1,30 @@
+{
+    "books": [
+        {
+            "id": "B-5W6ZL",
+            "title": "GOT",
+            "author": "vikram",
+            "total_copies": 30,
+            "available_copies": 30,
+            "added_on": "2026-10-19 23:44:58"
+        },
+        {
+            "id": "B-DTFWE",
+            "title": "harry porter",
+            "author": "vikram",
+            "total_copies": 40,
+            "available_copies": 39,
+            "added_on": "2026-10-19 23:46:10"
+        }
+    ],
+    "members": [
+        {
+            "id": "M-AC9XN",
+            "name": "vikram",
+            "email": "vs3d33fm@d",
+            "borrowed": [
+                "borrow_entry"
+            ]
+        }
+    ]
+}
