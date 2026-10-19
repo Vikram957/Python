@@ -141,3 +141,31 @@ s.parent1_method()
 
 
 
+
+# question practice
+class Student:
+    name = "vikram"
+    age = 12
+
+    def show(self):
+        print(f"name is:{self.name} your age is:{self.age}")
+
+obj = Student()
+print(obj.name)
+obj.show()
+print()
+
+class Car:
+    def __init__(self,brand,color):
+        self.brand = brand
+        self.color = color
+
+    def show_car(self):
+        print(f"brand is {self.brand} and color is {self.color}")
+
+bmw = Car("BMW","Black")
+audi = Car("Audi","white")
+
+bmw.show_car()
+audi.show_car()
+
