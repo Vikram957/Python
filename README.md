@@ -49,8 +49,6 @@ More projects and practice programs will be added as I continue learning.
 - `PyAudio`
 - `pikepdf`
 
-**Note:** `glob`, `datetime`, and `webbrowser` are built-in Python modules, so they don't need to be installed separately. Add `SpeechRecognition` and `PyAudio` only if you use them in your project.
-
 ## 🚀 My Goal
 
 My goal is to strengthen my Python fundamentals, build practical projects, and gradually explore Data Science, Machine Learning, Deep Learning, and Generative AI.
