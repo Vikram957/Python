@@ -84,6 +84,8 @@ class Library:
             print(f"{m["borrowed"]}")
         print()
 
+
+
     def borrow(self):
         member_id = input("Enter the member id:-").strip()
         members = [m for m in Library.data['members'] if m['id'] == member_id]
@@ -108,10 +110,40 @@ class Library:
             'title':book['title'],
             'borrow_on': datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         }
-        member['borrowed'].append("borrow_entry")
+        member['borrowed'].append(borrow_entry)
         book['available_copies'] -=1
         Library.save_data()
 
+
+
+    def return_book(self):
+        member_id = input("Enter the member id:-").strip()
+        members = [m for m in Library.data['members'] if m['id'] == member_id]
+        if not members:
+            print("no such id exists")
+            return
+        member = members[0]
+
+        if not member['borrowed']:
+            print("no borrowed books")
+            return
+
+        print("borrowed books")
+        for i,b in enumerate(member['borrowed'],start=1):
+            print(f"{i}. {b['title']} ({b['book_id']})")
+
+        try:
+            choice = int(input("Enter number to return:-"))
+            selected = member['borrowed'].pop(choice - 1)
+
+        except Exception as err:
+            print("Invalid Value")
+
+        books = [bk for bk in Library.data['books'] if bk ['id'] == selected['book_id']]
+        if books:
+            books[0]['available_copies'] +=1
+
+        Library.save_data()
 
 
 
@@ -119,32 +151,38 @@ class Library:
 
 hello = Library()
 
-print("="*50)
-print("Library Management System")
-print("="*50)
-print("1. Add Book")
-print("2. List Books")
-print("3. Add Members")
-print("4. List Members")
-print("5. Borrow Book")
-print("6. Return Book")
-print("7. Exit The Portal")
-print("="*50)
+while True:
+    print("="*60)
+    print("Library Management System")
+    print("="*60)
+    print("1. Add Book")
+    print("2. List Books")
+    print("3. Add Members")
+    print("4. List Members")
+    print("5. Borrow Book")
+    print("6. Return Book")
+    print("7. Exit The Portal")
+    print("="*60)
 
-choice = input("What task you want to do: ")
+    choice = input("What task you want to do: ")
 
-if choice == "1":
-    hello.add_book()
+    if choice == "1":
+        hello.add_book()
 
-if choice == "2":
-    hello.list_books()
+    if choice == "2":
+        hello.list_books()
 
-if choice == "3":
-    hello.add_member()
+    if choice == "3":
+        hello.add_member()
 
-if choice == "4":
-    hello.list_member()
+    if choice == "4":
+        hello.list_member()
 
-if choice == "5":
-    hello.borrow()
+    if choice == "5":
+        hello.borrow()
 
+    if choice == "6":
+        hello.return_book()
+
+    if choice == "7":
+        exit(0)
