@@ -28,11 +28,28 @@ Some small projects I've built while learning Python:
 
 More projects and practice programs will be added as I continue learning.
 
-## 💻 Technologies Used
+## 🛠️ Technologies Used
 
-- Python
-- Visual Studio Code
-- Git and GitHub
+- **Python** – Core programming language
+- **pyttsx3** – Text-to-speech functionality
+- **SpeechRecognition** – Voice command recognition
+- **PyAudio** – Microphone input
+- **glob** – Finding files and folders using patterns
+- **pikepdf** – Working with and modifying PDF files
+- **datetime** – Handling date and time
+- **webbrowser** – Opening websites through voice commands
+- **Visual Studio Code** – Code editor
+- **Git** – Version control
+- **GitHub** – Source code hosting
+
+## 📦 Libraries Required
+
+- `pyttsx3`
+- `SpeechRecognition`
+- `PyAudio`
+- `pikepdf`
+
+**Note:** `glob`, `datetime`, and `webbrowser` are built-in Python modules, so they don't need to be installed separately. Add `SpeechRecognition` and `PyAudio` only if you use them in your project.
 
 ## 🚀 My Goal
 
