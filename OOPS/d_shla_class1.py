@@ -203,4 +203,16 @@ print()
 tiger = Tiger("Tiger",11,"male",240)
 tiger.show()
 
+# encapsultaion
+class Car:
+    __color = "Red"
+    brand = "Tata"
+
+    def show(self):
+        print(self.color,self.brand)
+
+car = Car()
+print(car.brand)
+car.color()
+
 
