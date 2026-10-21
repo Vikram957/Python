@@ -15,10 +15,10 @@ class Library:
         with open(database,"r") as f:
             content = f.read().strip()
             if content:
-                data = json.loads(content)
+                data = json.loads(content)     #json.loads() converts JSON text into Python dictionaries and lists.
     else:
         with open(database,"w") as f:
-            json.dum(data,f,indent = 4)
+            json.dump(data,f,indent = 4)        #json.dump() writes the Python data into the JSON file.
 
     def gen_id(prefix = "B"):
         random_id = ""

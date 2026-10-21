@@ -1,5 +1,6 @@
 # command for run this program
-# python -m streamlit run libraryManag_UI.py
+# python -m streamlit run library_UI.py
+# python -m streamlit run OOPS/library_UI.py
 import json
 import random
 import string

@@ -15,7 +15,7 @@ def Action(data):
         text_to_speech.text_to_speech("I am your personal Python voice assistant")
         return "I am your personal Python voice assistant"
 
-    elif "hello" in user_data or "hye" in user_data:
+    elif "hello" in user_data or "hye" in user_data or "hy" in user_data or "hi" in user_data:
         text_to_speech.text_to_speech("hey, sir how can i help you")
         return "hey, sir how can i help you"
 

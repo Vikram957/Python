@@ -18,3 +18,4 @@ class Cat(Animal):
         print("hello i make meow sound")
 
 obj = Dog()
+obj.sound()
