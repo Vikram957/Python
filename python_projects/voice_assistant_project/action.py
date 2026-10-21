@@ -84,7 +84,7 @@ def Action(data):
         text_to_speech.text_to_speech("Python is a high-level, interpreted, general-purpose programming language known for its simple syntax, readability, and wide range of applications.")
         return "Python is a high-level, interpreted, general-purpose programming language known for its simple syntax, readability, and wide range of applications."
 
-    elif "thankyou" in user_data or "thank you" in user_data:
+    elif "thankyou" in user_data or "thank you" in user_data or "thanks" in user_data or "thank" in user_data:
         text_to_speech.text_to_speech("Welcome Sir")
         return "Welcome Sir"
 
