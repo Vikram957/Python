@@ -246,7 +246,7 @@ bike.start_engine()
 car.start_engine()
 
 
-# ATM
+# ATM PROGRAM
 class BANK:
     def __init__(self, initial_amt):
         self.__balance = initial_amt
@@ -285,6 +285,18 @@ account1.get_balance()
 
 
 
+
+# POLYMORPHISM*********************************
+class Calculator:
+    def add(self,a,b,c):
+        return a + b +c
+
+    def add(self,a,b):
+        return a + b
+
+calc = Calculator()
+calc.add(2,2)
+calc.add(2,2,2)
 
 
         
