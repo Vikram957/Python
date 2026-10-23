@@ -287,8 +287,9 @@ account1.get_balance()
 
 
 # POLYMORPHISM*********************************
+# Compile time polymorphism  
 class Calculator:
-    def add(self,a,b,c):
+    def add(self,a,b,c):       #function overloading
         return a + b +c
 
     def add(self,a,b):
@@ -297,6 +298,13 @@ class Calculator:
 calc = Calculator()
 calc.add(2,2)
 calc.add(2,2,2)
+
+
+
+
+
+
+
 
 
         
