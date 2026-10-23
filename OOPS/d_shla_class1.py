@@ -172,47 +172,79 @@
 
 
 # practice
-class Animal:
-    def __init__(self,name,age):
-        self.name = name
-        self.age = age
+# class Animal:
+#     def __init__(self,name,age):
+#         self.name = name
+#         self.age = age
 
-class Lion(Animal):
-    def __init__(self, name, age,gender):
-        super().__init__(name, age)
-        self.gender = gender
-    def show(self):
-        print(f"name is:{self.name} age is:{self.age} gender is:{self.gender}")
+# class Lion(Animal):
+#     def __init__(self, name, age,gender):
+#         super().__init__(name, age)
+#         self.gender = gender
+#     def show(self):
+#         print(f"name is:{self.name} age is:{self.age} gender is:{self.gender}")
 
-class Tiger(Lion):
-    def __init__(self, name, age, gender,weight):
-        super().__init__(name, age, gender)
-        self.weight = weight
+# class Tiger(Lion):
+#     def __init__(self, name, age, gender,weight):
+#         super().__init__(name, age, gender)
+#         self.weight = weight
 
-    def show(self):
-        print(f"name is:{self.name} age is:{self.age} gender is:{self.gender} weight is:{self.weight}")
+#     def show(self):
+#         print(f"name is:{self.name} age is:{self.age} gender is:{self.gender} weight is:{self.weight}")
 
 
 
     
 
-lion = Lion("Lion",10,"Male")
-lion.show()
-print()
+# lion = Lion("Lion",10,"Male")
+# lion.show()
+# print()
 
-tiger = Tiger("Tiger",11,"male",240)
-tiger.show()
+# tiger = Tiger("Tiger",11,"male",240)
+# tiger.show()
 
-# encapsultaion
-class Car:
-    __color = "Red"
-    brand = "Tata"
+# # encapsultaion
+# class Car:
+#     __color = "Red"
+#     brand = "Tata"
 
-    def show(self):
-        print(self.color,self.brand)
+#     def show(self):
+#         print(self.color,self.brand)
 
-car = Car()
-print(car.brand)
-car.color()
+# car = Car()
+# print(car.brand)
+# car.color()
+
+
+class Vehicle:
+    def __init__(self,brand):
+        self.brand = brand
+
+    def start_engine(self):
+        print(f"{self.brand} engine started")
+
+class Car(Vehicle):
+    def __init__(self, brand, color):
+        super().__init__(brand)
+        self.color = color
+
+    def start_engine(self):
+        print(f"{self.brand} engine started")
+
+class Bike(Vehicle):
+    def __init__(self, brand,model):
+        super().__init__(brand)
+        self.model = model
+
+    def start_engine(self):
+        print(f"{self.brand} engine started")
+
+car = Car("BMW","Black")
+bike = Bike("Ninja",2025)
+
+bike.start_engine()
+car.start_engine()
+
+
 
 

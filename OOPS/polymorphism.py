@@ -30,3 +30,11 @@ class Human(Animal):
 
 obj = Human()
 obj.speak()
+
+
+
+
+
+
+
+
