@@ -334,6 +334,26 @@ obj1.speak()
 
 
 
+# method overloading
+# dunder method// magic methods
+class Number:
+    def __init__(self,value):
+        self.value = value
+
+    def __sub__(self, other):
+        return self.value - other.value
+
+a = Number(40)
+b = Number(30)
+
+print(b - a)
+
+
+
+
+
+
+
 
 
         
