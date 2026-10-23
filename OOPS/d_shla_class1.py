@@ -288,20 +288,49 @@ account1.get_balance()
 
 # POLYMORPHISM*********************************
 # Compile time polymorphism  
-class Calculator:
-    def add(self,a,b,c):       #function overloading
-        return a + b +c
+# class Calculator:
+#     def add(self,a,b,c):       #function overloading
+#         return a + b +c
 
-    def add(self,a,b):
-        return a + b
+#     def add(self,a,b):
+#         return a + b
 
-calc = Calculator()
-calc.add(2,2)
-calc.add(2,2,2)
-
-
+# calc = Calculator()
+# calc.add(2,2)
+# calc.add(2,2,2)
 
 
+
+
+# USING KWARG*******************************
+class Calculator1:
+    def add(self, *numbers):
+        return sum(numbers)
+
+    def add(self,*numbers):
+        return sum(numbers)
+
+calc1 = Calculator1()
+calc1.add(1,2,3)
+calc1.add(1,2,3,4)
+calc1.add(1,2)
+
+
+
+# RUNTIME POLYMORPHISM  /// METHOD OVER-RIDING
+class Animal:
+    def speak(self):
+        print("hello i roar")
+
+class Human(Animal):
+    def speak(self):        #it override upper method 
+        print("hello iam vikram")
+
+obj = Human()
+obj.speak()
+
+obj1 = Animal()
+obj1.speak()
 
 
 
