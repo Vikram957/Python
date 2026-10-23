@@ -246,5 +246,56 @@ bike.start_engine()
 car.start_engine()
 
 
+# ATM
+class BANK:
+    def __init__(self, initial_amt):
+        self.__balance = initial_amt
+
+
+    def deposit(self,amount):
+        if amount > 0:
+            self.__balance += amount
+            print(f"deposit amount is: {amount}. total balance is: {self.__balance}")
+
+        else:
+            print("deposit must be positive")
+
+    def withdraw(self,amount):
+        if amount > 0 and self.__balance >=amount:
+            self.__balance -= amount
+            print(f"withdraw amount is: {amount}. new balance {self.__balance}")
+
+        else:
+            print("invalid withdraw amount")
+
+    def get_balance(self):
+        return self.__balance
+
+
+
+account1 = BANK(10000)
+
+account1.deposit(1000)
+
+account1.get_balance()
+
+account1.withdraw(2000)
+
+account1.get_balance()
+
+
+
+
+
+        
+
+
+
+
+
+
+    
+        
+
 
 
