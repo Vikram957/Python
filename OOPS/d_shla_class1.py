@@ -482,6 +482,58 @@ print(Student2.school)
 
 
 
+# Abstraction 
+from abc import ABC,abstractmethod
+class Remote(ABC):
+    @abstractmethod
+    def power_on(self):
+        pass
+
+class TV(Remote):
+    def power_on(self):
+        print("hello")
+
+tv = TV()
+tv.power_on()
+
+
+
+
+from abc import ABC , abstractmethod
+
+class ATM(ABC):
+
+    @abstractmethod
+    def withdraw(self,amt):
+        pass
+
+    @abstractmethod
+    def check_balance(self):
+        pass
+
+
+# child class
+class SBI_ATM(ATM):
+    def __init__(self,balance):
+        self.balance = balance
+
+    def withdraw(self, amt):
+        if amt <= self.balance:
+            self.balance -= amt
+            print(f"{amt} withdrawn successfully")
+        else:
+            print("Insufficiant balance!")
+
+    def check_balance1(self):
+        print("available balance:",self.balance)
+        
+
+user = SBI_ATM(1000)
+
+user.check_balance()
+user.withdraw(500)
+user.check_balance()
+
 
 
 
