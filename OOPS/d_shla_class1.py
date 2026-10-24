@@ -373,9 +373,75 @@ for i in Bird() , Airplane() , Fish():
 
 
 
+class Google_pay:
+    def Pay(self,amt):
+        print("paid using google pay",amt)
 
-        
 
+class phone_pay:
+    def Pay(self,amt):
+        print("paid using phone pay",amt)
+
+
+class paytm:
+    def Pay(self,amt):
+        print("paid using paytm",amt)
+
+
+def check_out(payement):
+    payement.pay(1000)
+
+
+check_out(Google_pay())
+check_out(phone_pay())
+check_out(paytm())
+
+
+
+
+
+
+
+class Email:
+    def send(self,msg):
+        print("Email :",msg)
+
+class SMS:
+    def send(self,msg):
+        print("SMS :",msg)
+
+class WhatsApp:
+    def send(self,msg):
+        print("WhatsApp:",msg)
+
+def notify(service):
+    service.send("ordered placed")
+
+
+notify(Email())
+notify(WhatsApp())
+notify(SMS())
+
+
+
+
+# MRO*************
+class A:
+    def show(self):
+        print("i'am class A method")
+
+class B(A):
+    pass
+
+class C(A):
+    pass
+
+class D(B,C):
+    pass
+
+d = D()
+d.show()
+print(D.mro())
 
 
 
