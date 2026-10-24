@@ -445,10 +445,32 @@ print(D.mro())
 
 
 
+# static method
+class Student:
+
+    @staticmethod
+    def add(a,b):
+        return a + b
+
+s1 = Student()
+print(s1.add())
 
 
-    
-        
+
+# class Method
+class Student1:
+    school = "ABC School"
+
+    @classmethod
+    def show_school(cls):
+        print(cls.school)
+
+Student1.show_school()
+
+
+
+
+
 
 
 
