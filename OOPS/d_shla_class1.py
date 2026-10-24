@@ -469,6 +469,20 @@ Student1.show_school()
 
 
 
+class Student2:
+    school = "abcd"
+
+    @classmethod
+    def change_school(cls,name):
+        cls.school = name
+
+Student2.change_school("XYZ School")
+print(Student2.school)
+
+
+
+
+
 
 
 
