@@ -353,6 +353,24 @@ print(b - a)
 
 
 
+# DUCK TYPING**************************
+class Bird:
+    def fly(self):
+        print("bird is flying")
+
+class Airplane:
+    def fly(self):
+        print("airplane is flying")
+
+class Fish:
+    def swim(self):
+        print("fish is swimming in the water")
+
+
+for i in Bird() , Airplane() , Fish():
+    i.fly()
+
+
 
 
 
