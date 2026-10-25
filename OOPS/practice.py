@@ -21,6 +21,7 @@ student3 = Student("sawan" , 24 , 85)
 student1.show_details()
 student2.show_details()
 student3.show_details()
+print()
 
 
 # Car Class
@@ -86,3 +87,49 @@ class BankAccount:
 vikram = BankAccount("Vikram" , 1000)
 vikram.withdraw(500)
 vikram.deposit(1000)
+print()
+
+
+
+# Q7. Inheritance — Vehicle
+
+# Create a parent class Vehicle with:
+# - brand
+# - speed
+# - A method display_info()
+# Create two child classes:
+# - Car
+# - Bike
+class Vehicle:
+    def __init__(self,brand , speed):
+        self.brand = brand
+        self.speed = speed
+
+    def display_info(self):
+        print(f"brand is: {self.brand} , speed is: {self.speed}")
+
+
+class Car(Vehicle):
+    def __init__(self, brand, speed,color):
+        super().__init__(brand, speed)
+        self.color = color
+
+    def display_info(self):
+            print(f"car brand is: {self.brand} , speed is: {self.speed} , color is:{self.color}")
+
+class Bike(Vehicle):
+    def __init__(self, brand, speed,tyre):
+        super().__init__(brand, speed)
+        self.tyre = tyre
+
+    def display_info(self):
+            print(f"car brand is: {self.brand} , speed is: {self.speed} , tyre is:{self.tyre}")
+
+
+bmw = Car("BMW",50,"black")
+bmw.display_info()
+    
+    
+
+    
+    
