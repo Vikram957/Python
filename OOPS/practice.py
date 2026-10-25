@@ -128,8 +128,43 @@ class Bike(Vehicle):
 
 bmw = Car("BMW",50,"black")
 bmw.display_info()
-    
-    
+print()
 
+
+
+
+# Method Overriding — Animals
+# Create a parent class Animal with a method sound().
+# Create child classes:
+# - Dog
+# - Cat
+# - Cow
+# Override sound() in each child class to return the appropriate sound.
     
+class Animal:
+     def sound(self):
+          print("some sound")
+
+class Dog(Animal):
+     def sound(self):
+          print("Dog barks")
+
+class Cat(Animal):
+     def sound(self):
+          print("Cat makes sound meow meow")
+
+class Cow(Animal):
+     def sound(self):
+          print("iam cow i make some sound")
+
+dog = Dog()
+dog.sound()
+
+cat = Cat()
+cat.sound()
+
+cow = Cow()
+cow.sound()
+
+
     
