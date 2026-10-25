@@ -55,3 +55,34 @@ print(bmw.speed)
 
 bmw.brake()
 print(bmw.speed)
+
+print()
+
+
+# Bank Account
+# - Create a BankAccount class with account_holder and balance.
+# - Implement deposit(amount).
+# - Implement withdraw(amount).
+# - Prevent withdrawals that exceed the available balance.
+
+class BankAccount:
+    def __init__(self,account_holder , balance):
+        self.account_holder = account_holder
+        self.balance = balance
+
+    def deposit(self,deposit_amt):
+        self.balance += deposit_amt
+        print("money deposited")
+        print("updated balance:",self.balance)
+
+    def withdraw(self,withdraw_amt):
+        if self.balance >= withdraw_amt:
+            self.balance -= withdraw_amt
+            print("money withdraw successfully")
+            print("available balance is:",self.balance)
+        else:
+            print("insufficiant balance")
+
+vikram = BankAccount("Vikram" , 1000)
+vikram.withdraw(500)
+vikram.deposit(1000)
