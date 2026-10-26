@@ -183,3 +183,78 @@ s1.school = "XYZ School"
 print(s1.school)
 print(s2.school)
 print(Student.school)
+print()
+
+
+
+
+class ATM:
+    def __init__(self,name,acc_no,pin,balance):
+          self.name = name
+          self._acc_no = acc_no
+          self.__pin = pin
+          self.__balance = balance
+
+# verify pin
+    def verify_pin(self):
+          entered_pin = int(input("enter your pin:"))
+          if entered_pin == self.__pin:
+               return True
+          else:
+               return False
+
+# check balance
+    def check_balance(self):
+         if self.verify_pin():
+              print(f"Available balance: {self.__balance}")
+
+
+    def deposit(self):
+         if self.verify_pin():
+              amt = float(input("enter deposit amount:"))
+              if amt > 0:
+                   self.__balance += amt
+                   print(f"{amt} amount deposited successfully.")
+                   print(f"updated balance is: {self.__balance}")
+
+              else:
+                   print("INVALID AMOUNT!")
+
+    def withdraw(self):
+         if self.verify_pin():
+              amt = float(input("enter amount to withdraw:"))
+              if amt > self.__balance:
+                   print("insufficiant balance")
+              elif amt <= 0:
+                   print("Invalid withdraw amount")
+              else:
+                   self.__balance -= amt
+                   print(f"{amt} withdrawn successfully")
+                   print(f"remaining amount is:{self.__balance}")
+
+    def change_pin(self):
+         if self.verify_pin():
+              new_pin = int(input("enter new pin:"))
+              self.verify_pin = new_pin
+              print("pin has been changed successfully")
+
+                
+                            
+
+person = ATM("Vikram",123456,123,1000)
+# person.verify_pin()
+person.deposit()
+person.withdraw()
+person.check_balance()
+
+                    
+              
+
+    
+
+    
+
+    
+
+    
+     
