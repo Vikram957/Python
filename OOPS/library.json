@@ -5,7 +5,7 @@
             "title": "GOT",
             "author": "vikram",
             "total_copies": 30,
-            "available_copies": 30,
+            "available_copies": 20,
             "added_on": "2026-10-19 23:44:58"
         },
         {
@@ -31,6 +31,22 @@
             "total_copies": 20,
             "available_copies": 20,
             "added_on": "2026-10-21 19:41:37"
+        },
+        {
+            "id": "B-AE2UF",
+            "title": "Avengers",
+            "author": "Marvel",
+            "total_copies": 100,
+            "available_copies": 100,
+            "added_on": "2026-10-26 19:57:19"
+        },
+        {
+            "id": "B-D8YIM",
+            "title": "vgbuby",
+            "author": "mangesh",
+            "total_copies": 10,
+            "available_copies": 10,
+            "added_on": "2026-10-26 20:08:21"
         }
     ],
     "members": [
@@ -38,7 +54,65 @@
             "id": "M-AC9XN",
             "name": "vikram",
             "email": "vs3d33fm@d",
-            "borrowed": []
+            "borrowed": [
+                {
+                    "book_id": "B-5W6ZL",
+                    "title": "GOT",
+                    "borrow_on": "2026-10-26 19:55:49"
+                },
+                {
+                    "book_id": "B-5W6ZL",
+                    "title": "GOT",
+                    "borrow_on": "2026-10-26 19:55:50"
+                }
+            ]
+        },
+        {
+            "id": "M-7HKVM",
+            "name": "mangesh",
+            "email": "hbybujn",
+            "borrowed": [
+                {
+                    "book_id": "B-5W6ZL",
+                    "title": "GOT",
+                    "borrow_on": "2026-10-26 20:09:12"
+                },
+                {
+                    "book_id": "B-5W6ZL",
+                    "title": "GOT",
+                    "borrow_on": "2026-10-26 20:09:12"
+                },
+                {
+                    "book_id": "B-5W6ZL",
+                    "title": "GOT",
+                    "borrow_on": "2026-10-26 20:09:12"
+                },
+                {
+                    "book_id": "B-5W6ZL",
+                    "title": "GOT",
+                    "borrow_on": "2026-10-26 20:09:12"
+                },
+                {
+                    "book_id": "B-5W6ZL",
+                    "title": "GOT",
+                    "borrow_on": "2026-10-26 20:09:13"
+                },
+                {
+                    "book_id": "B-5W6ZL",
+                    "title": "GOT",
+                    "borrow_on": "2026-10-26 20:09:13"
+                },
+                {
+                    "book_id": "B-5W6ZL",
+                    "title": "GOT",
+                    "borrow_on": "2026-10-26 20:09:13"
+                },
+                {
+                    "book_id": "B-5W6ZL",
+                    "title": "GOT",
+                    "borrow_on": "2026-10-26 20:09:13"
+                }
+            ]
         }
     ]
 }
