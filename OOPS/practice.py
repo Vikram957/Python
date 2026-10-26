@@ -243,11 +243,44 @@ class ATM:
 
 person = ATM("Vikram",123456789,1234,1000)
 # person.verify_pin()
-person.deposit()
-person.withdraw()
-person.check_balance()
+# person.deposit()
+# person.withdraw()
+# person.check_balance()
 
 
+# ATM MENU
+while True:
+     print("===========ATM MENU==============")
+    #  print("1. Account Balance")
+     print("1. check balance")
+     print("2. Deposit Balance")
+     print("3. Withdraw balance")
+     print("4. change Pin")
+     print("5. Exit")
+
+     choice = input("enter your choice:")
+
+     if choice == "1":
+          person.check_balance()
+
+     elif choice == "2":
+          person.deposit()
+     elif choice == "3":
+          person.withdraw()
+     elif choice =="4":
+          person.change_pin()
+     elif choice == "5":
+          print("thankyou for using atm")
+          break
+     else:
+          print("enter valid choice:")
+        
+        
+        
+
+    
+
+ 
 
                     
               
