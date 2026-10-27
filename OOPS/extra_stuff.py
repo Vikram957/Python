@@ -31,17 +31,39 @@
 # slow_function()
 
 
-def uppercase(func):
-    def wrapper():
-        for i in range(3):
-            func()
+# def uppercase(func):
+#     def wrapper():
+#         for i in range(3):
+#             func()
             
+#     return wrapper
+
+
+# @uppercase
+# def greet():
+#      print("hello students")
+
+
+# greet()
+
+
+
+
+def check_access(func):
+    def wrapper():
+        role = input("enter your role:")
+        if role.lower() == "admin":
+            func()
+        else:
+            print("Access Denied")
     return wrapper
+        
 
 
-@uppercase
-def greet():
-     print("hello students")
+@check_access
+def dashboard():
+    print("welcome to dashboard")
 
 
-greet()
+
+dashboard()
