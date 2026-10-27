@@ -33,15 +33,15 @@
 
 def uppercase(func):
     def wrapper():
-        result = func()
-        return result.upper()
+        for i in range(3):
+            func()
+            
     return wrapper
+
 
 @uppercase
 def greet():
-    return "hello students"
-
-print(greet())
+     print("hello students")
 
 
-
+greet()
