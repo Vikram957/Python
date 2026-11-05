@@ -2,6 +2,7 @@ import text_to_speech
 import speech_to_text
 import datetime
 import webbrowser
+import subprocess
 import random
 
 def Action(data):
@@ -48,6 +49,21 @@ def Action(data):
         webbrowser.open("https://www.youtube.com/")
         text_to_speech.text_to_speech("opening youtube for you")
         return "opening youtube for you"
+
+    elif "open calculator" in user_data:
+        subprocess.Popen("calc")
+        text_to_speech.text_to_speech("Opening Calculator")
+        return "Opening Calculator"
+
+    elif "open notepad" in user_data:
+        subprocess.Popen("notepad")
+        text_to_speech.text_to_speech("Opening Notepad")
+        return "Opening Notepad"
+
+    elif "open file explorer" in user_data:
+        subprocess.Popen("explorer")
+        text_to_speech.text_to_speech("Opening File Explorer")
+        return "Opening File Explorer"
 
 
     elif "google" in user_data or "open google" in user_data:
@@ -120,6 +136,12 @@ def Action(data):
     elif "bye" in user_data or "goodbye" in user_data:
         text_to_speech.text_to_speech("Goodbye Sir, have a nice day.")
         return "Goodbye Sir, have a nice day."
+
+    elif "search for" in user_data or "search" in user_data:
+        query = user_data.replace("search for", "").strip()
+        webbrowser.open(f"https://www.google.com/search?q={query}")
+        text_to_speech.text_to_speech(f"Searching for {query}")
+        return f"Searching for {query}"
   
     else:
         text_to_speech.text_to_speech("I'm not able to understand")
