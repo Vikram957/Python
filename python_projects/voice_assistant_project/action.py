@@ -60,7 +60,7 @@ def Action(data):
         text_to_speech.text_to_speech("Opening Notepad")
         return "Opening Notepad"
 
-    elif "open file explorer" in user_data:
+    elif "open file explorer" in user_data or 'open file' in user_data:
         subprocess.Popen("explorer")
         text_to_speech.text_to_speech("Opening File Explorer")
         return "Opening File Explorer"
@@ -144,8 +144,8 @@ def Action(data):
         return f"Searching for {query}"
   
     else:
-        text_to_speech.text_to_speech("I'm not able to understand")
-        return "I'm not able to understand"
+        text_to_speech.text_to_speech("I'm not able to understand. please Try Again")
+        return "I'm not able to understand. Please Try Again"
 
 
 
