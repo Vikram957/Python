@@ -601,3 +601,423 @@ def remove_digit2(s):
     return ans
 
 print(remove_digit2('Vik2ra232m'))
+
+
+
+
+# DICTIONARY QUESTION
+# 1.	Create a dictionary of student details and print all keys and values
+def student_details(student):
+    for key, value in student.items():
+        print(key, ":", value)
+
+
+student = {
+    "name": "Vikram",
+    "age": 21,
+    "course": "B.Tech",
+    "city": "Indore"
+}
+
+student_details(student)
+print()
+
+
+# 2.	Check whether a given key exists in a dictionary. 
+def check_key(d,key):
+    if key in d:
+        return 'exists'
+    else:
+        return 'not exsts'
+
+d ={
+    "name": "Vikram",
+        "age": 21,
+        "course": "B.Tech",
+        "city": "Indore"
+
+}
+print(check_key(d,'city'))
+print()
+
+
+# 3.	Count the number of key-value pairs in a dictionary. 
+def count_key_value(d):
+    count = 0
+    for k,v in d.items():
+        count+=1
+    return count
+
+student = {
+    "name": "Vikram",
+    "age": 21,
+    "course": "B.Tech",
+    "city": "Indore"
+}
+
+print(count_key_value(student))
+print()
+
+
+# 4.	Add a new key-value pair to a dictionary. 
+def add_key_value(d,key,value):
+    d[key] = value
+    return d
+
+student = {
+    "name": "Vikram",
+    "age": 21,
+    "course": "B.Tech",
+    "city": "Indore"
+}
+
+print(add_key_value(student,'college','IIST'))
+print(add_key_value(student,'Birth_place','Dhar'))
+print()
+
+
+# 5.	Update the value of an existing key. 
+def update_key_value(d,key,value):
+    d[key] = value
+    return d
+
+
+student = {
+    "name": "Vikram",
+    "age": 21,
+    "course": "B.Tech",
+    "city": "Indore"
+}
+
+print(update_key_value(student,'city','dhar'))
+print()
+
+
+# 6.	Delete a specific key from a dictionary. 
+def delete_key(d,key):
+    if key in d:
+        d.pop(key)
+    return d
+
+student = {
+    "name": "Vikram",
+    "age": 21,
+    "course": "B.Tech",
+    "city": "Indore"
+}
+
+print(delete_key(student,'city'))
+print()
+
+
+# 7.	Find the sum of all values in a dictionary. 
+def sum_values(d):
+    total = 0
+    for i , k in d.items():
+        total += k
+    return total
+
+marks ={
+    'english' : 98,
+    'maths' : 88,
+    'science' : 80,
+    'physics' : 78
+}
+print(sum_values(marks))
+print()
+
+# 8.	Merge two dictionaries into one.
+def merge_dic(d1,d2):
+    for key,value in d2.items():
+        d1[key] = value
+    return d1
+
+s1 = {
+    'name' : 'vikram',
+    'age' : 22,
+
+}
+s2 = {
+    'city' : 'indore',
+    'birth_place' : 'dhar'
+}
+
+print(merge_dic(s1,s2))
+print()
+
+
+# 9.	Count the frequency of each character in a string. 
+def count_freq_str(s):
+    ans = {}
+    for i in s:
+        if i in ans:
+            ans[i] +=1
+        else:
+            ans[i] = 1
+
+    return ans
+
+print('frequency of character:',count_freq_str('VikramSingh'))
+print()
+
+
+# 10 Count the frequency of each word in a sentence.
+def count_freq_words(s):
+    ans = {}
+    words = s.lower().split()
+    for i in words:
+        if i in ans:
+            ans[i] += 1
+        else:
+            ans[i] = 1
+
+    return ans
+
+print(count_freq_words('python is a programing language'))
+print()
+
+
+# 11.	Find the first non-repeating character in a string.
+def first_non_repeating_char(s):
+    for i in s:
+        if s.lower().count(i) ==1:
+            return i
+
+print('first non repeating character:',first_non_repeating_char('Vivikram'))
+print()
+
+
+# using dictionary
+def first_non_repeat_dictionary(s):
+    ans = {}
+    s = s.lower()
+    # frequency count
+    for i in s:
+        if i in ans:
+            ans[i] += 1
+        else:
+            ans[i] = 1
+
+    # first non repeat character
+    for i in s:
+        if ans[i] == 1:
+            return i
+    
+    return None
+
+print('first non repeat character using dictionary:',first_non_repeat_dictionary('Vivkiram'))
+print()
+
+
+# 12.	Find the first repeating character in a string.
+def first_rep_char(s):
+    ans = {}
+    s = s.lower()
+    # count freq
+    for i in s:
+        if i in ans:
+            ans[i] += 1
+        else:
+            ans[i] = 1
+
+    for i in s:
+        if ans[i] >1:
+            return i
+
+    return None
+
+print('first repeatiing character:',first_rep_char('Vikramammt'))
+
+
+
+# 13.	Find the most frequent character in a string. 
+def most_freq_char(s):
+    most = ''
+    ans = {}
+    for i in s:
+        if i in ans:
+            ans[i] += 1
+        else:
+            ans[i] = 1
+
+    for i in ans:
+        if most == '' or ans[i] > ans[most]:
+            most = i
+    return most
+
+print(most_freq_char('Vikramsingh'))
+
+
+# another way
+def most_freq_char2(s):
+    most = ''
+    max_count = 0
+
+    for i in s:
+        if s.count(i) > max_count:
+            max_count = s.count(i)
+            most = i
+
+    return most
+
+print(most_freq_char2('Vikramsingh'))
+
+
+# 14.	Find the least frequent character in a string. 
+def least_freq_char(s):
+    ans = {}
+    least = ''
+    for i in s:
+        if i in ans:
+            ans[i]+=1
+        else:
+            ans[i] = 1
+
+    for i in ans:
+        if least =='' or ans[i] < ans[least]:
+            least = i
+
+    return least
+
+print("least freq char:",least_freq_char('VikramikrVa'))
+
+
+# 15.	Find duplicate characters in a string.
+def find_duplicate(s):
+    duplicate = ''
+    for i in s:
+        if s.count(i) > 1:
+            duplicate +=i
+    return duplicate
+
+print('duplicate char is:',find_duplicate('Vikramsingh'))
+
+
+# better approach using dic
+def find_duplicate2(s):
+    duplicate = {}
+    for i in s:
+        if i in duplicate:
+            duplicate[i] += 1
+        else:
+            duplicate[i] =1
+
+    for i in duplicate:
+        if duplicate[i] > 1:
+            print(i ,":",duplicate[i])
+    
+find_duplicate2('Vikramsingh')
+
+
+#16 Find duplicate words in a sentence.
+def duplicate_word(s):
+    ans = {}
+    word = s.lower().split()
+
+    for i in word:
+        if i in ans:
+            ans[i] += 1
+        else:
+            ans[i] = 1
+
+    for i in ans:
+        if ans[i] >1:
+            print(i ,':',ans[i])
+
+duplicate_word('python is a language python is famous')
+
+
+
+# 17.	Find the key having the maximum value. 
+def max_key(d):
+    maximum = 0
+    max_key = ''
+    for i,k in d.items():
+        if k > maximum:
+            maximum = k
+            max_key = i
+
+    return max_key
+
+mark = {
+    'maths':22,
+    'science' : 23,
+    'Gk' : 56,
+    'physics': 99
+}
+
+print('max marks:',max_key(mark))
+
+
+# 18.	Find the key having the minimum value. 
+def min_key(d):
+    minimum = float('+inf')
+    min_key = ''
+
+    for i,k in d.items():
+        if k < minimum:
+            min_key = i
+            minimum = k
+
+    return min_key
+
+
+mark = {
+    'maths':22,
+    'science' : 23,
+    'Gk' : 56,
+    'physics': 99
+}
+
+print('minimum marks:',min_key(mark))
+
+
+# 19.	Sort a dictionary by keys.
+def sort_bykeys(d):
+    ans = {}
+    for i in sorted(d):
+        ans[i] = d[i]
+
+    return ans
+
+mark = {
+    'maths':22,
+    'science' : 23,
+    'Gk' : 56,
+    'physics': 99
+}
+
+print('sorted dictionary:',sort_bykeys(mark))
+        
+
+# 20.	Sort a dictionary by values.
+def sort_byValues(d):
+    ans = {}
+    for i in sorted(d,key = d.get):
+        ans[i] = d[i]
+
+    return ans
+
+print(sort_byValues(mark))
+
+
+# 21.	Reverse a dictionary (swap keys and values). 
+def reverse_dict(d):
+    ans = {}
+
+    for key, value in d.items():
+        ans[value] = key
+
+    return ans
+
+
+student = {
+    'name': 'Vikram',
+    'age': 21,
+    'city': 'Indore'
+}
+
+print(reverse_dict(student))
+
+
+
