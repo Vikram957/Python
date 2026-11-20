@@ -383,3 +383,221 @@ def find_max_diff(l):
     return Difference
 
 print(find_max_diff([1,2,3,4,5,6,7,8,9]))
+
+
+
+
+# STR QUESTIONS
+# Write a Python program to find the number of characters in a string (without using len()).
+def count_char(s):
+    count = 0
+    for i in s:
+        count+=1
+    return count
+
+print('number of character:',count_char('Vikram'))
+
+
+# Write a Python program to count the number of occurrences of all vowels in a string.
+def count_vowel(s):
+    count = 0
+    for i in s:
+        if i.lower() in 'aeiou':
+            count+=1
+    return count
+
+print('vowel count:',count_vowel('Vikramsingh'))
+
+
+# Write a Python program to find common characters present in two words.
+def common_char(s1,s2):
+    common = ''
+    for i in s1:
+        if i in s2:
+            common +=i
+    return common
+
+print('common character:',common_char('Vikram','Singh'))
+
+
+# 4. Write a Python program to check whether a given string is a palindrome
+def is_palindrome(s):
+    palindrome = False
+    if s == s[::-1]:
+        palindrome =  True
+
+    return palindrome
+
+print(is_palindrome('vivk'))
+
+
+def is_palindrome2(s):
+    rev = ""
+
+    for i in s:
+        rev = i + rev
+
+    if s == rev:
+        return True
+    else:
+        return False
+
+print(is_palindrome2('madam'))
+print(is_palindrome2('hello'))
+
+
+# 5. Write a Python program to convert alternate characters in a string to capital letters.
+def alternate_upper(s):
+    result = ""
+
+    for i in range(len(s)):
+        if i % 2 == 0:
+            result += s[i].upper()
+        else:
+            result += s[i]
+
+    return result
+
+print('alternate character:',alternate_upper("vikramsingh"))
+
+
+# 8. Write a Python program to reverse a string without using built-in methods
+def revered_str(s):
+    reverse =''
+    for i in s:
+        reverse = i + reverse
+    return reverse
+
+print("reversed str:",revered_str('Vikram'))
+
+
+def reversed_str_slicing(s):
+    return s[::-1]
+
+print('Reversed str using slicing:',reversed_str_slicing('Singh'))
+
+
+# 9. Write a Python program to count the number of words in a sentence (without using the split() function).
+def count_words(s):
+    count = 1
+    for i in s:
+        if i == ' ':
+            count+=1
+    return count
+print('words count:',count_words('Python is a easy language'))
+
+
+
+# 10. Write a Python program to remove all spaces from a string.
+def remove_space(s):
+    result = ''
+    for i in s:
+        if i != ' ':
+            result +=i
+    return result
+print(remove_space('Python is easy'))
+
+
+def remove_space_func(s):
+    return s.replace(' ','')
+
+print(remove_space_func('Python is easy'))
+
+# 11. Write a Python program to replace all occurrences of a given character in a string with another character.
+def replace_char(s,ch,new):
+    ans = ''
+    for i in s:
+        if i==ch:
+            i = new
+        ans +=i
+        
+    return ans
+
+print(replace_char('Vikram is a boy','i','a'))
+
+
+def replace_character(s, old, new):
+    result = ""
+
+    for i in s:
+        if i == old:
+            result += new
+        else:
+            result += i
+
+    return result
+
+print(replace_character("vikram", "a", "o"))
+
+
+# 12. Write a Python program to read a sentence and print the longest word in that sentence.
+def longest_word(s):
+    words = s.split()
+    longest = ""
+
+    for i in words:
+        if len(i) > len(longest):
+            longest = i
+
+    return longest
+
+print('longest word:',longest_word("Python is very interesting language"))
+
+
+# 13. Write a Python program to check if two strings are anagrams (words formed by rearranging the letters of another, like “listen” and “silent”).
+def is_anagram(s1, s2):
+    if sorted(s1.lower()) == sorted(s2.lower()):
+        return True
+    else:
+        return False
+
+print(is_anagram('Vikram', 'markivv'))
+
+
+def is_anagram2(s1, s2):
+    if len(s1) != len(s2):
+        return False
+
+    for i in s1.lower():
+        if s1.lower().count(i) != s2.lower().count(i):
+            return False
+
+    return True
+
+print(is_anagram2('Vikram', 'markiv'))
+
+
+# 14. Write a Python program to find all the words in a string that start with a vowel.
+
+def start_with_vowel(s):
+    vowel = ''
+    for i in s.split():
+        if i[0].lower() in 'aeiou':
+            vowel += i+" "
+
+    return vowel
+
+print('words starts with vowel:',start_with_vowel('python Is a Old Programming '))
+
+
+# 16. Write a Python program to remove all digits from a given string.
+def remove_digit(s):
+    ans = ''
+    for i in s:
+        if i.isalpha():
+            ans +=i
+    return ans
+
+print(remove_digit('Vik2ra232m'))
+
+
+def remove_digit2(s):
+    ans = ''
+
+    for i in s:
+        if not i.isdigit():
+            ans += i
+
+    return ans
+
+print(remove_digit2('Vik2ra232m'))
