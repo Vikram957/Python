@@ -1021,3 +1021,91 @@ print(reverse_dict(student))
 
 
 
+# 22.	Create a dictionary from two lists. 
+def create_dict(keys, values):
+    ans = {}
+
+    for i, j in zip(keys, values):
+        ans[i] = j
+
+    return ans
+
+
+keys = ['name', 'age', 'city', 'course']
+values = ['Vikram', 21, 'Indore', 'B.Tech']
+
+print(create_dict(keys, values))
+
+
+def convert_list_dict(k,v):
+    return dict(zip(k,v))
+
+list1 = ['name','age','mob']
+list2 = ['vikram',22,1234456]
+print(convert_list_dict(list1,list2))
+
+
+# 23.	Convert a list into a dictionary where elements are keys and their squares are values. 
+def keys_value_square(lst):
+    ans = {}
+    for i in lst:
+        ans[i] = i**2
+    return ans
+
+print(keys_value_square([1,2,3,4,5,6,7,8,9]))
+
+
+# 24.	Find all keys associated with a particular value. 
+def key_associated(d,value):
+    for i,k in d.items():
+        if k == value:
+            print(i ,":",k)
+
+    return None
+
+mark = {
+    'maths':22,
+    'science' : 23,
+    'Gk' : 22,
+    'physics': 99
+}
+
+key_associated(mark,22)
+
+
+# 25.	Remove all duplicate values from a dictionary. 
+
+def remove_duplicate(d):
+    seen = []
+    ans ={}
+    for key,value in d.items():
+        if value not in seen:
+            ans[key] = value
+            seen.append(value)
+
+    return ans
+
+mark = {
+    'maths':22,
+    'science' : 23,
+    'Gk' : 22,
+    'physics': 99
+}
+print('removed duplicate:',remove_duplicate(mark))
+
+# count how many times each element appears in a list using a dictionary.
+def count_frequency(lst):
+    ans = {}
+
+    for i in lst:
+        if i in ans:
+            ans[i] += 1
+        else:
+            ans[i] = 1
+
+    return ans
+
+
+numbers = [1, 2, 3, 2, 4, 1, 2, 5, 3]
+
+print(count_frequency(numbers))
