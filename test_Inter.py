@@ -61,7 +61,7 @@ rev = []
 for i in list1:
     rev = [i] + rev
 
-print(rev)
+print("reversed:",rev)
 
 
 
