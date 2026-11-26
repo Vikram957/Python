@@ -154,3 +154,100 @@ print(check_equal('Vikram','VikraM'))
 
 
 
+# 11.	Write a Python program to print the first and last character of a string.
+def first_last(s):
+    first = s[0]
+    last = s[-1]
+
+    return first,last
+
+print('first and last character:',first_last('Vikram'))
+
+
+# 12.	Write a Python program to print the characters at even indexes of a string
+
+def even_indx_char(s):
+    evenIndexCharacter = ''
+    for i in range(len(s)):
+        if i%2==0:
+           evenIndexCharacter+=s[i] + ' '
+    return evenIndexCharacter
+
+print('even index character:',even_indx_char('Vikram'))
+
+
+
+# 13.	Write a Python program to count how many times a particular character appears in a string. Example: "banana", character = "a" → 3.
+def particular_char_count(s,char):
+    count = 0
+    for i in s:
+        if i == char:
+            count +=1
+
+    return count
+
+
+print('character count is:',particular_char_count('Python is easy language','a'))
+
+
+
+# 14.	Write a Python program to find the first occurrence of a character in a string without using find().
+def first_occurrence(s):
+    word = ''
+    for i in s:
+        if i not in word:
+            word += i
+        else:
+            return i
+            
+
+
+print('first occurence is:',first_occurrence('supercalifragilisticexplodicious'))
+
+
+
+# 15.	Write a Python program to print all characters that appear more than once in a string.
+def all_duplicate_elements(s):
+    dic ={}
+    for i in s:
+        if i in dic:
+            dic[i] +=1
+        else:
+            dic[i]=1
+    # now for duplicate elements
+    ans = ''
+    for i,v in dic.items():
+      
+        if v >1:
+            ans += i +' '
+
+    return ans
+
+print('duplicate characters are:',all_duplicate_elements('vikramsinghnv'))
+
+
+
+# 16.	Write a Python program to remove all spaces from a string without using replace().
+def remove_space(s):
+    ans = ''
+    for i in s:
+        if i!=' ':
+            ans+=i
+
+    return ans
+
+print('space removed:',remove_space('python is easy'))
+
+
+
+
+# 17.	Write a Python program to remove duplicate characters from a string. Example: "programming" → "progamin".
+def remove_duplicate(s):
+    ans =''
+    for i in s:
+        if i not in ans:
+            ans +=i
+
+    return ans
+
+print(remove_duplicate('programming'))
