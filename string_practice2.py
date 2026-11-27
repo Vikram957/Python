@@ -251,3 +251,69 @@ def remove_duplicate(s):
     return ans
 
 print(remove_duplicate('programming'))
+
+
+
+
+# 18.	Write a Python program to check whether a string contains only digits without using isdigit().
+def check_digit(s):
+    if s =='':
+        return False
+
+    for i in s:
+        if i < '0' or i >'9':
+            return False
+    return True
+
+print('is digit string?',check_digit('232v92'))
+
+
+
+# 19.	Write a Python program to count the number of words in a string without using split(). Example: "Python is easy" → 3.
+
+# only for one space between words
+def count_words(s):
+    count = 0
+    for i in s:
+        if i==' ':
+            count+=1
+
+    return count+1
+
+print('total words count is:',count_words('Python is easy language'))
+
+
+# for more than 1 spaces
+def count_words_optimal(s):
+    count = 0
+
+    for i in range(len(s)):
+        if s[i] == ' ' and s[i-1] != ' ':
+            count += 1
+
+    return count + 1
+
+print('optimal words count:',count_words_optimal('Python is    easy'))
+
+
+
+# 20.	Write a Python program to find the most frequently occurring character in a string.
+def most_occuring(s):
+    dic = {}
+    for i in s:
+        if i not in dic:
+            dic[i] = 1
+        else:
+            dic[i]+=1
+
+
+    max = 0
+    ans =''
+    for i,v in dic.items():
+        if v > max:
+            ans = i
+            max = v
+
+    return ans
+
+print('most occuring character:',most_occuring('vikramsingh'))
